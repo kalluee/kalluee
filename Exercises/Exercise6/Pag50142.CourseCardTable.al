@@ -8,6 +8,7 @@ page 50142 "TK Course Card Table"
     ApplicationArea = All;
     UsageCategory = Tasks;
     SourceTable = "TK Course";
+    // proo
 
     layout
     {
