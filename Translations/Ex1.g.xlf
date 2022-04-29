@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Ex1">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 1923410014 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Employee Course</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1923410014 - Field 4089053058 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Available Slots</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course - Field Available Slots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1923410014 - Field 489521652 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course - Field Course Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1923410014 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1923410014 - Field 318613646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Details</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course - Field Details - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1923410014 - Field 2835823741 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course - Field End date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1923410014 - Field 3891454143 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course - Field Location - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1923410014 - Field 3782935649 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Details</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course - Field Location details - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1923410014 - Field 397713818 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max No. of Participants</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course - Field Max No. of Participants - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1923410014 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1923410014 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course - Field Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1923410014 - Field 1761621280 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Registered Participants</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course - Field Registered Participants - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1923410014 - Field 4200172552 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course - Field Starting date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1358115490 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course Participants</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course Participants - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1358115490 - Field 489521652 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course Participants - Field Course Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1358115490 - Field 2078979900 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course Location</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course Participants - Field Course Location - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1358115490 - Field 1297388590 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course Participants - Field Course Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1358115490 - Field 2835823741 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course Participants - Field End date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1358115490 - Field 3444679095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>First Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course Participants - Field First Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1358115490 - Field 4068742839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Name"</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course Participants - Field Last Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1358115490 - Field 4020811126 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Participant Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course Participants - Field Participant Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1358115490 - Field 4200172552 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Course Participants - Field Starting date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4112811162 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course Card</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4112811162 - Control 2526910089 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Details</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card - Control Course Details - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4112811162 - Control 318613646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Details</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card - Control Details - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4112811162 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4112811162 - Control 75197648 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Participant list</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card - Control Participants - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1174558796 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course Card Table</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1174558796 - NamedType 3166085914" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export Courses</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType BookNameTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 1174558796 - NamedType 920269075" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course Code field is blank</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType CourseCodeISBlankMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 1174558796 - NamedType 308341003" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Excel is successfully imported.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType ExcelImportSuccess</note>
+        </trans-unit>
+        <trans-unit id="Page 1174558796 - NamedType 3725157417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export Courses</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType HeaderTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 1174558796 - NamedType 511806700" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No Excel file found!</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType NoFileFoundMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 1174558796 - NamedType 2967603460" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Courses</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType SheetNameTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 1174558796 - NamedType 4273853447" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please Choose the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType UploadExcelMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 1174558796 - Action 4117893766 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;Export</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - Action &amp;Export - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1174558796 - Action 1772648229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;Import</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - Action &amp;Import - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2408789020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2408789020 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Courses</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course List - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 983376576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course Participant List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Participants List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1952283510 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Employee Details</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Employee Details FactBox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1952283510 - Control 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Employee Number</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Employee Details FactBox - Control No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 435687992 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Participants Course List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Participants Course List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1785886921 - Control 467884568 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Specifies the value of the Bonus level field.</source>
+          <note from="Developer" annotates="general" priority="2">et-EE=Boonuse tase</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension TK Customer Card - Control TK Bonus Level - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1785886921 - Control 1268807429 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Specifies the value of the Sales Amount field.</source>
+          <note from="Developer" annotates="general" priority="2">et-EE=Müügi summa</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension TK Customer Card - Control TK Sales Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3951512403 - Control 4104139275 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 866835530">
+          <source>Listed Courses</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension TK Employee Card - Control TK Courses - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 387750541 - Action 435687992 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 272934828">
+          <source>Participants Course List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension TK Empoyee List - Action TK Participants Course List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3827747705 - Control 2680655974 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2556642749">
+          <source>Specifies the value of the TK Job Def. Dim. Code field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension TK Job setup - Control TK Job Def. Dim. Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3827747705 - Control 2680655974 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2556642749">
+          <source>Default Dimention Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension TK Job setup - Control TK Job Def. Dim. Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4222047330 - Control 840762041 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4034894651">
+          <source>Specifies the value of the Discount field.</source>
+          <note from="Developer" annotates="general" priority="2">et-EE=Allahindlus</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension TK Sales Invoice - Control TK Discount % - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2151834619 - Control 840762041 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
+          <source>Specifies the value of the Discount field.</source>
+          <note from="Developer" annotates="general" priority="2">et-EE=Allahindlus</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension TK Sales Order - Control TK Discount % - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 39796391 - Control 840762041 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 280137910">
+          <source>Specifies the value of the Discount field.</source>
+          <note from="Developer" annotates="general" priority="2">et-EE=Allahindlus</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension TK Sales Quote - Control TK Discount % - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1836211269 - Field 467884568 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Bonus level</source>
+          <note from="Developer" annotates="general" priority="2">et-EE=Boonuse tase</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension TK Customer - Field TK Bonus Level - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1836211269 - Field 1268807429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Sales Amount</source>
+          <note from="Developer" annotates="general" priority="2">et-EE=Müügi summa</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension TK Customer - Field TK Sales Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1790964631 - Field 4222804144 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1498446062">
+          <source>Age</source>
+          <note from="Developer" annotates="general" priority="2">et-EE=Vanus</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension TK Employee - Field TK Age - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1790964631 - Field 2589743766 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1498446062">
+          <source>Personal ID</source>
+          <note from="Developer" annotates="general" priority="2">et-EE=Isikukood</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension TK Employee - Field TK Personal ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3447787960 - Field 1950164922 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2556642749">
+          <source>TK Bonus Level Def. Dim. Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension TK Jobs Setup - Field TK Bonus Level Def. Dim. Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3447787960 - Field 2680655974 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2556642749">
+          <source>TK Job Def. Dim. Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension TK Jobs Setup - Field TK Job Def. Dim. Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1832130732 - Field 840762041 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Discount</source>
+          <note from="Developer" annotates="general" priority="2">et-EE=Allahindlus</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension TK Sales Header - Field TK Discount % - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3951011496 - EnumValue 51414179 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Office - Tallinn</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum TK Course Location Enum - EnumValue Office - Tallinn - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3951011496 - EnumValue 472912589 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Office - Tartu</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum TK Course Location Enum - EnumValue Office - Tartu - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3951011496 - EnumValue 2529288414 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Online Course</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum TK Course Location Enum - EnumValue On-Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3951011496 - EnumValue 3448339824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Other</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum TK Course Location Enum - EnumValue Other - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

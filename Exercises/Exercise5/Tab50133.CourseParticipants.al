@@ -4,8 +4,6 @@ table 50133 "TK Course Participants"
     DataClassification = CustomerContent;
     LookupPageId = "TK Course Participants List";
     DrillDownPageId = "TK Course Participants List";
-    // abfksdb
-
 
     fields
     {

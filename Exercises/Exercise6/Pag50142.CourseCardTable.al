@@ -7,9 +7,8 @@ page 50142 "TK Course Card Table"
     SaveValues = true;
     ApplicationArea = All;
     UsageCategory = Tasks;
-    SourceTable = "TK Course";
-    // proo
-
+    SourceTable = "TK Course";  
+    
     layout
     {
         area(Content)
