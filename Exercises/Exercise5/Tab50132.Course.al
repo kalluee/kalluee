@@ -63,6 +63,8 @@ table 50132 "TK Course"
         {
             Caption = 'Available Slots';
             DataClassification = CustomerContent;
+
+
         }
         field(110; Details; Blob)
         {
@@ -130,7 +132,6 @@ table 50132 "TK Course"
                 end;
             until CourseParticipants.Next() = 0;
     end;
-
 
 
     trigger OnInsert()

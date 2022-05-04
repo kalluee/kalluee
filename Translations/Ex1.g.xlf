@@ -99,7 +99,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table TK Course Participants - Field First Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1358115490 - Field 4068742839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Last Name"</source>
+          <source>Last Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table TK Course Participants - Field Last Name - Property Caption</note>
         </trans-unit>
@@ -163,20 +163,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType HeaderTxt</note>
         </trans-unit>
+        <trans-unit id="Page 1174558796 - NamedType 789266984" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Courses</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType MainSheetTxt</note>
+        </trans-unit>
         <trans-unit id="Page 1174558796 - NamedType 511806700" size-unit="char" translate="yes" xml:space="preserve">
           <source>No Excel file found!</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType NoFileFoundMsg</note>
         </trans-unit>
-        <trans-unit id="Page 1174558796 - NamedType 2967603460" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Courses</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType SheetNameTxt</note>
-        </trans-unit>
         <trans-unit id="Page 1174558796 - NamedType 4273853447" size-unit="char" translate="yes" xml:space="preserve">
           <source>Please Choose the Excel file.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType UploadExcelMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 1174558796 - Control 75197648 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Participant list</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - Control Participants - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1174558796 - Action 4117893766 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>&amp;Export</source>
@@ -217,6 +222,26 @@
           <source>Participants Course List</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page TK Participants Course List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2161442971 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course Card Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report CourseListReport - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2161442971 - NamedType 3725157417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course Card Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report CourseListReport - NamedType HeaderTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 171765226 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>LAB_CustomerList</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report LAB_CustomerList - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 171765226 - Property 3863440606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer and Ledger Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report LAB_CustomerList - Property AdditionalSearchTerms</note>
         </trans-unit>
         <trans-unit id="PageExtension 1785886921 - Control 467884568 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
           <source>Specifies the value of the Bonus level field.</source>

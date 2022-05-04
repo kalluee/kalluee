@@ -67,7 +67,6 @@ page 50134 "TK Course Card"
                 {
                     ApplicationArea = All;
                     Editable = false;
-
                 }
                 field(Details; TextToBlob)
                 {
@@ -104,20 +103,6 @@ page 50134 "TK Course Card"
         }
     }
 
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
-    }
 
     var
         [InDataSet]
@@ -152,16 +137,12 @@ page 50134 "TK Course Card"
                 begin
                     LocationEditable := True;
                 end;
-
         end;
     end;
 
 
-    local procedure AvailableSpots(): Integer
+    procedure AvailableSpots(): Integer
     begin
         exit(rec."Max No. of Participants" - rec."Registered Participants");
     end;
-
-
-
 }

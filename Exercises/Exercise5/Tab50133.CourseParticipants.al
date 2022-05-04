@@ -51,7 +51,7 @@ table 50133 "TK Course Participants"
         }
         field(40; "Last Name"; Text[30])
         {
-            Caption = 'Last Name"';
+            Caption = 'Last Name';
             FieldClass = FlowField;
             CalcFormula = lookup(Employee."Last Name" where("No." = field("Participant Code")));
         }

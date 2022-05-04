@@ -36,7 +36,6 @@ page 50138 "TK Employee Details FactBox"
             {
                 ApplicationArea = All;
             }
-
         }
     }
     local procedure ShowDetails()

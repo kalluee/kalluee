@@ -7,8 +7,9 @@ page 50142 "TK Course Card Table"
     SaveValues = true;
     ApplicationArea = All;
     UsageCategory = Tasks;
-    SourceTable = "TK Course";  
-    
+    SourceTable = "TK Course";
+
+
     layout
     {
         area(Content)
@@ -64,6 +65,12 @@ page 50142 "TK Course Card Table"
                     ApplicationArea = All;
                 }
             }
+            part(Participants; "TK Course Participants List")
+            {
+                Caption = 'Participant list';
+                SubPageLink = "Course Code" = field("Course Code");
+                UpdatePropagation = SubPart;
+            }
         }
     }
 
@@ -105,17 +112,21 @@ page 50142 "TK Course Card Table"
 
     var
         FileName: Text[100];
-        SheetName: Text[100];
+        NewSheetName: Text[100];
+        MainSheetName: Text[100];
+
 
         TempExcelBuffer: Record "Excel Buffer" temporary;
         CourseBuffer: Record "TK Course";
+        ParticipantsBuffer: Record "TK Course Participants";
         UploadExcelMsg: Label 'Please Choose the Excel file.';
         NoFileFoundMsg: Label 'No Excel file found!';
         CourseCodeISBlankMsg: Label 'Course Code field is blank';
         ExcelImportSuccess: Label 'Excel is successfully imported.';
         BookNameTxt: Label 'Export Courses';
-        SheetNameTxt: Label 'Courses';
+        MainSheetTxt: Label 'Courses';
         HeaderTxt: Label 'Export Courses';
+
 
     local procedure GetValueAtCell(Row: Integer; Col: Integer): Text
     begin
@@ -135,12 +146,12 @@ page 50142 "TK Course Card Table"
         UploadIntoStream(UploadExcelMsg, '', '', FromFile, InS);
         if FromFile <> '' then begin
             FileName := FileMgt.GetFileName(FromFile);
-            SheetName := TempExcelBuffer.SelectSheetsNameStream(InS);
+            NewSheetName := TempExcelBuffer.SelectSheetsNameStream(InS);
         end else
             Error(NoFileFoundMsg);
         TempExcelBuffer.Reset();
         TempExcelBuffer.DeleteAll();
-        TempExcelBuffer.OpenBookStream(InS, SheetName);
+        TempExcelBuffer.OpenBookStream(InS, NewSheetName);
         TempExcelBuffer.ReadSheet();
     end;
 
@@ -156,6 +167,7 @@ page 50142 "TK Course Card Table"
         MaxRowNo := 0;
         LineNo := 0;
         CourseBuffer.Reset();
+        ParticipantsBuffer.Reset();
 
         TempExcelBuffer.Reset();
         if TempExcelBuffer.FindLast() then begin
@@ -196,9 +208,10 @@ page 50142 "TK Course Card Table"
 
     local procedure ExportToExcel()
     begin
-        TempExcelBuffer.CreateNewBook(SheetNameTxt);
-        ExportCourseTable();
+        MainSheetName := 'Courses';
+        TempExcelBuffer.CreateNewBook(MainSheetName);
         TempExcelBuffer.WriteSheet(HeaderTxt, CompanyName(), UserId());
+        ExportCourseTable();
         TempExcelBuffer.CloseBook();
         DownloadAndOpenExcel();
     end;
@@ -206,9 +219,11 @@ page 50142 "TK Course Card Table"
 
     local procedure ExportCourseTable()
     begin
-        ExportCourseHeader();
+        MainSheetName := 'Courses';
+        // ExportCourseHeader();
         if CourseBuffer.FindSet() then
             repeat
+
                 TempExcelBuffer.NewRow();
                 TempExcelBuffer.AddColumn(CourseBuffer."Course Code", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
                 TempExcelBuffer.AddColumn(CourseBuffer.Name, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
@@ -221,7 +236,31 @@ page 50142 "TK Course Card Table"
                 TempExcelBuffer.AddColumn(CourseBuffer."Max No. of Participants", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
                 TempExcelBuffer.AddColumn(CourseBuffer."Registered Participants", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
                 TempExcelBuffer.AddColumn(CourseBuffer."Available Slots", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
+
+                ParticipantsBuffer.Reset();
+                ParticipantsBuffer.SetRange("Course Code", CourseBuffer."Course Code");
+
+
+                NewSheetName := Format(CourseBuffer."Course Code");
+                TempExcelBuffer.SelectOrAddSheet(NewSheetName);
+
+                if ParticipantsBuffer.FindSet() then begin
+
+
+                    repeat
+                        TempExcelBuffer.WriteSheet(NewSheetName, CompanyName(), UserId());
+                        ParticipantsBuffer.CalcFields("First Name", "Last Name");
+                        TempExcelBuffer.NewRow();
+                        TempExcelBuffer.AddColumn(ParticipantsBuffer."Participant Code", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(ParticipantsBuffer."First Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(ParticipantsBuffer."Last Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                    until ParticipantsBuffer.Next() = 0;
+                end;
+
+                TempExcelBuffer.SelectOrAddSheet(MainSheetName);
+
             until CourseBuffer.Next() = 0;
+
     end;
 
     local procedure ExportCourseHeader()

@@ -9,15 +9,16 @@
             "server": "http://bc19",
             "serverInstance": "BC",
             "authentication": "Windows",
-            "startupObjectId": 50142,
-            "startupObjectType": "Page",
+            "startupObjectId": 50143,
+            "startupObjectType": "Report",
             "breakOnError": true,
             "breakOnRecordWrite": false,
             "enableSqlInformationDebugger": true,
             "enableLongRunningSqlStatements": true,
             "longRunningSqlStatementsThreshold": 500,
             "numberOfSqlStatements": 10,
-            "tenant": "default"
+            "tenant": "default",           
+            
         }
     ]
 }

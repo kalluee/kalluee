@@ -32,27 +32,22 @@ page 50135 "TK Course List"
                 {
                     ApplicationArea = All;
                 }
-                field("Available Spots"; Rec."Available Slots")
+                field("Available Spots"; AvailableSpots())
                 {
                     ApplicationArea = All;
+                    Editable = false;
                 }
             }
-        }
-
-        area(Factboxes)
-        {
 
         }
+
     }
 
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
 
-            }
-        }
-    }
+    local procedure AvailableSpots(): Integer
+    begin
+        exit(rec."Max No. of Participants" - rec."Registered Participants");
+    end;
+
+
 }
