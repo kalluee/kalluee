@@ -52,8 +52,8 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox6</rd:DefaultName>
                           <Visibility>
-                            <Hidden>=Code.SetData(Cstr(Fields!Startingdate_Course.Value) +Chr(177) + 
-Cstr(Fields!Enddate_Course.Value), 1)</Hidden>
+                            <Hidden>=Code.SetData(Cstr(Fields!FromDate.Value) +Chr(177) + 
+Cstr(Fields!ToDate.Value), 1)</Hidden>
                           </Visibility>
                           <Style>
                             <Border>
@@ -79,7 +79,7 @@ Cstr(Fields!Enddate_Course.Value), 1)</Hidden>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!FromDate.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -89,6 +89,9 @@ Cstr(Fields!Enddate_Course.Value), 1)</Hidden>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Visibility>
+                            <Hidden>true</Hidden>
+                          </Visibility>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -113,7 +116,7 @@ Cstr(Fields!Enddate_Course.Value), 1)</Hidden>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!ToDate.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -123,6 +126,9 @@ Cstr(Fields!Enddate_Course.Value), 1)</Hidden>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Visibility>
+                            <Hidden>true</Hidden>
+                          </Visibility>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1354,6 +1360,9 @@ Cstr(Fields!Enddate_Course.Value), 1)</Hidden>
             <RepeatRowHeaders>true</RepeatRowHeaders>
             <KeepTogether>true</KeepTogether>
             <DataSetName>DataSet_Result</DataSetName>
+            <PageBreak>
+              <BreakLocation>End</BreakLocation>
+            </PageBreak>
             <Top>1.09883cm</Top>
             <Left>4.25662cm</Left>
             <Height>8.78778cm</Height>
@@ -1365,7 +1374,7 @@ Cstr(Fields!Enddate_Course.Value), 1)</Hidden>
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>13.82888cm</Height>
+        <Height>9.88661cm</Height>
         <Style>
           <Border>
             <Color>DimGray</Color>
@@ -1374,7 +1383,7 @@ Cstr(Fields!Enddate_Course.Value), 1)</Hidden>
           </Border>
         </Style>
       </Body>
-      <Width>16.72259cm</Width>
+      <Width>15.38676cm</Width>
       <Page>
         <PageHeader>
           <Height>2.57529cm</Height>
@@ -1481,7 +1490,7 @@ Cstr(Fields!Enddate_Course.Value), 1)</Hidden>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value />
+                      <Value>=Code.GetData(1,1)</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -1522,7 +1531,7 @@ Cstr(Fields!Enddate_Course.Value), 1)</Hidden>
               <Top>1.52259cm</Top>
               <Left>10.29731cm</Left>
               <Height>0.6cm</Height>
-              <Width>0.77139cm</Width>
+              <Width>1.19472cm</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -1550,7 +1559,7 @@ Cstr(Fields!Enddate_Course.Value), 1)</Hidden>
               </Paragraphs>
               <rd:DefaultName>Textbox5</rd:DefaultName>
               <Top>1.52259cm</Top>
-              <Left>11.0687cm</Left>
+              <Left>11.49203cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>5</ZIndex>
