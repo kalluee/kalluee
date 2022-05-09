@@ -13,6 +13,7 @@ report 50143 CourseListReport
         {
 
             RequestFilterFields = "Course Code";
+            PrintOnlyIfDetail = true;
             column(CourseCode_Course; "Course Code")
             {
                 IncludeCaption = true;
@@ -78,8 +79,6 @@ report 50143 CourseListReport
             }
         }
     }
-
-
     var
         HeaderTxt: Label 'Course Card Report';
 }

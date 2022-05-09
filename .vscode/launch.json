@@ -9,7 +9,7 @@
             "server": "http://bc19",
             "serverInstance": "BC",
             "authentication": "Windows",
-            "startupObjectId": 50143,
+            "startupObjectId": 50144,
             "startupObjectType": "Report",
             "breakOnError": true,
             "breakOnRecordWrite": false,

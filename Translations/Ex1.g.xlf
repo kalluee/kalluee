@@ -223,6 +223,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page TK Participants Course List - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 4279752619 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course List Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Course List Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4279752619 - NamedType 3725157417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course List Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Course List Report - NamedType HeaderTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 4279752619 - ReportDataItem 3534050887 - Property 1806354803" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Course List Report - ReportDataItem Course - Property RequestFilterHeading</note>
+        </trans-unit>
         <trans-unit id="Report 2161442971 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Course Card Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -242,6 +257,16 @@
           <source>Customer and Ledger Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report LAB_CustomerList - Property AdditionalSearchTerms</note>
+        </trans-unit>
+        <trans-unit id="Report 1089457788 - ReportLabel 2834152875" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Documents</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Report for Multiple Tables - ReportLabel Sales_Document_Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1089457788 - ReportLabel 1535886013" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Report for Multiple Tables - ReportLabel Total_Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1785886921 - Control 467884568 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
           <source>Specifies the value of the Bonus level field.</source>

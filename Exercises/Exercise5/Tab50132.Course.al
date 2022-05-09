@@ -79,6 +79,10 @@ table 50132 "TK Course"
         {
             Clustered = true;
         }
+        key(MyKey; "Starting date")
+        {
+
+        }
     }
 
     procedure SetCourseInformationToField(TextToBlob: Text)
