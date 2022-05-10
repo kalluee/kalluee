@@ -1,0 +1,9 @@
+{
+    "CRS.OnSaveAlFileAction": "Rename",
+    "CRS.FileNamePattern": "<ObjectTypeShort><ObjectId>.<ObjectNameShort>.al",
+    "CRS.FileNamePatternExtensions": "<ObjectTypeShort><BaseId>-Ext<ObjectId>.<ObjectNameShort>.al",
+    "CRS.ObjectNamePrefix": "TK ",
+    "CRS.RemovePrefixFromFilename": true,
+    "screencastMode.onlyKeyboardShortcuts": true,
+    "screencastMode.fontSize": 30
+}

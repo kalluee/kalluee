@@ -11,7 +11,7 @@ tableextension 50104 "TK Sales Line" extends "Sales Line"
                 AddDiscountToSalesLine();
             end;
         }
-        // Add changes to table fields here
+
     }
 
     procedure AddDiscountToSalesLine()

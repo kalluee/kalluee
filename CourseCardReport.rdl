@@ -19,7 +19,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>10.86864cm</Width>
+                  <Width>11.13322cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -73,13 +73,13 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                           <TablixBody>
                             <TablixColumns>
                               <TablixColumn>
-                                <Width>1.99732cm</Width>
+                                <Width>2.08551cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>4.04372cm</Width>
+                                <Width>4.13191cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>4.8276cm</Width>
+                                <Width>4.91579cm</Width>
                               </TablixColumn>
                             </TablixColumns>
                             <TablixRows>
@@ -459,7 +459,7 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
             <Top>1.03161cm</Top>
             <Left>2.44157cm</Left>
             <Height>1.75226cm</Height>
-            <Width>10.86864cm</Width>
+            <Width>11.13322cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -568,26 +568,6 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                   <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <TopBorder>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </TopBorder>
-                <BottomBorder>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </BottomBorder>
-                <LeftBorder>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </LeftBorder>
-                <RightBorder>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </RightBorder>
                 <BackgroundColor>Khaki</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>

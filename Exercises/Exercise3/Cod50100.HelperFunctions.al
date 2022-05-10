@@ -91,10 +91,6 @@ codeunit 50100 "TK Helper Functions"
                 SalesHeader."Dimension Set ID" := newDimSetId;
                 SalesHeader.Modify()
             end;
-
-
-
         end;
     end;
-
 }
