@@ -26,4 +26,31 @@ tableextension 50145 "TK Gen. Journal Line" extends "Gen. Journal Line"
         end;
 
     end;
+    
+    //CALCFIELDS kasutamise näide. Võta ja arvuta calcfields enne välja ja pane seejärel muutujasse 
+
+    // procedure CalcDepr(): Decimal
+    // var
+    //     FADeprBook: Record "FA Depreciation Book";
+
+    //     DeprProc: Decimal;
+    //     AcqCost: Decimal;
+    //     DeprVal: Decimal;
+    // begin
+    //     DeprProc := 0;
+    //     FADeprBook.reset;
+    //     FADeprBook.Setrange("FA No.", "Fixed Asset"."No.");
+
+    //     if FADeprBook.FindFirst() then begin
+
+    //         FADeprBook.CalcFields("Acquisition Cost");
+    //         AcqCost := FADeprBook."Acquisition Cost";
+
+    //         if AcqCost <> 0 then begin
+    //             FADeprBook.CalcFields(Depreciation);
+    //             DeprVal := FADeprBook.Depreciation;
+    //             DeprProc := DeprVal / AcqCost;
+    //             exit(DeprProc);
+    //         end;
+    //     end;
 }

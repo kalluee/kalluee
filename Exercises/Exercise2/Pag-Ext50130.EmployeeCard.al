@@ -40,30 +40,157 @@ pageextension 50130 "TK Employee Card" extends "Employee Card"
         }
     }
 
+    var
+        FirstDigit: Integer;
+        SecondDigit: Integer;
+        ThirdDigit: Integer;
+        FourthDigit: Integer;
+        FifthDigit: Integer;
+        SixthDigit: Integer;
+        SeventhDigit: Integer;
+        EighthDigit: Integer;
+        NinthDigit: Integer;
+        TenthDigit: Integer;
+        LastDigit: Integer;
+        FirstWeightSum: Decimal;
+        SecondWeightSum: Decimal;
+        PersonalId: Text[11];
 
     local procedure DecodePersonalId()
     var
         Employee: Record Employee;
-        PersonalId: Text[11];
-        PersonalIdNumber: BigInteger;
+
+        PersonalIdCode: BigInteger;
         DOB: Date;
         GenderInt: Integer;
+        ControlInt: Integer;
     begin
         Employee := Rec;
         PersonalId := Rec."TK Personal ID";
-        if StrLen(PersonalId) <> 11 then begin
+        if StrLen(PersonalId) <> 11 then
             Error('Valesti sisestatud isikukood (liiga lühike)!');
-            exit;
-        end;
-        if not Evaluate(PersonalIdNumber, PersonalId) then begin
-            Error('Valesti sisestatud isikukood! Sisesta ainult numbrid');
-            exit;
-        end;
+
+        if not Evaluate(PersonalIdCode, PersonalId) then
+            Error('Valesti sisestatud isikukood! Sisesta ainult numbrid!');
+
+        if not IsValidIdCode(PersonalId) then
+            Error('Valesti sisestatud isikukood! Kontrolli viimast numbrit!');
+
         GenderFromPersonalId(CopyStr(Rec."TK Personal ID", 1, 1), GenderInt);
         DateOfBirthFromPersonalId(CopyStr(Rec."TK Personal ID", 2, 6), GenderInt);
         EmployeeAge(Rec."Birth Date");
     end;
 
+    local procedure IsValidIdCode(PersonalId: Text) IsValidIdCode: Boolean
+    begin
+        Evaluate(LastDigit, CopyStr(PersonalId, 11));
+
+        if GetFirstCheckNumber(PersonalId) < 10 then begin
+            if GetFirstCheckNumber(PersonalId) = LastDigit then begin
+                IsValidIdCode := true;
+            end else
+                if GetSecondCheckNumber(PersonalId) < 10 then begin
+                    if GetSecondCheckNumber(PersonalId) = LastDigit then
+                        IsValidIdCode := true;
+                end else
+                    IsValidIdCode := false;
+        end;
+    end;
+
+
+    local procedure GetFirstCheckNumber(PersonalId: Text): Integer
+    var
+        FirstStage: array[10] of Integer;
+        CheckFactorDivisionInt: Integer;
+        CheckFactorMultiply: Integer;
+        FirstCheckNumber: Integer;
+
+    begin
+        Evaluate(FirstDigit, CopyStr(PersonalId, 1, 1));
+        Evaluate(SecondDigit, CopyStr(PersonalId, 2, 1));
+        Evaluate(ThirdDigit, CopyStr(PersonalId, 3, 1));
+        Evaluate(FourthDigit, CopyStr(PersonalId, 4, 1));
+        Evaluate(FifthDigit, CopyStr(PersonalId, 5, 1));
+        Evaluate(SixthDigit, CopyStr(PersonalId, 6, 1));
+        Evaluate(SeventhDigit, CopyStr(PersonalId, 7, 1));
+        Evaluate(EighthDigit, CopyStr(PersonalId, 8, 1));
+        Evaluate(NinthDigit, CopyStr(PersonalId, 9, 1));
+        Evaluate(TenthDigit, CopyStr(PersonalId, 10, 1));
+
+        FirstStage[1] := 1;
+        FirstStage[2] := 2;
+        FirstStage[3] := 3;
+        FirstStage[4] := 4;
+        FirstStage[5] := 5;
+        FirstStage[6] := 6;
+        FirstStage[7] := 7;
+        FirstStage[8] := 8;
+        FirstStage[9] := 9;
+        FirstStage[10] := 1;
+
+        FirstWeightSum := ((FirstStage[1] * FirstDigit) +
+                           (FirstStage[2] * SecondDigit) +
+                           (FirstStage[3] * ThirdDigit) +
+                           (FirstStage[4] * FourthDigit) +
+                           (FirstStage[5] * FifthDigit) +
+                           (FirstStage[6] * SixthDigit) +
+                           (FirstStage[7] * SeventhDigit) +
+                           (FirstStage[8] * EighthDigit) +
+                           (FirstStage[9] * NinthDigit) +
+                           (FirstStage[10] * TenthDigit));
+
+        CheckFactorDivisionInt := ((FirstWeightSum / 11) div 1);
+        CheckFactorMultiply := CheckFactorDivisionInt * 11;
+        FirstCheckNumber := FirstWeightSum - CheckFactorMultiply;
+        exit(FirstCheckNumber);
+    end;
+
+    local procedure GetSecondCheckNumber(PersonalId: Text): Integer
+    var
+        SecondStage: array[10] of Integer;
+        CheckFactorDivisionInt: Integer;
+        CheckFactorMultiply: Integer;
+        SecondCheckNumber: Integer;
+
+    begin
+        Evaluate(FirstDigit, CopyStr(PersonalId, 1, 1));
+        Evaluate(SecondDigit, CopyStr(PersonalId, 2, 1));
+        Evaluate(ThirdDigit, CopyStr(PersonalId, 3, 1));
+        Evaluate(FourthDigit, CopyStr(PersonalId, 4, 1));
+        Evaluate(FifthDigit, CopyStr(PersonalId, 5, 1));
+        Evaluate(SixthDigit, CopyStr(PersonalId, 6, 1));
+        Evaluate(SeventhDigit, CopyStr(PersonalId, 7, 1));
+        Evaluate(EighthDigit, CopyStr(PersonalId, 8, 1));
+        Evaluate(NinthDigit, CopyStr(PersonalId, 9, 1));
+        Evaluate(TenthDigit, CopyStr(PersonalId, 10, 1));
+
+        SecondStage[1] := 3;
+        SecondStage[2] := 4;
+        SecondStage[3] := 5;
+        SecondStage[4] := 6;
+        SecondStage[5] := 7;
+        SecondStage[6] := 8;
+        SecondStage[7] := 9;
+        SecondStage[8] := 1;
+        SecondStage[9] := 2;
+        SecondStage[10] := 3;
+
+        SecondWeightSum := ((SecondStage[1] * FirstDigit) +
+                            (SecondStage[2] * SecondDigit) +
+                            (SecondStage[3] * ThirdDigit) +
+                            (SecondStage[4] * FourthDigit) +
+                            (SecondStage[5] * FifthDigit) +
+                            (SecondStage[6] * SixthDigit) +
+                            (SecondStage[7] * SeventhDigit) +
+                            (SecondStage[8] * EighthDigit) +
+                            (SecondStage[9] * NinthDigit) +
+                            (SecondStage[10] * TenthDigit));
+
+        CheckFactorDivisionInt := ((SecondWeightSum / 11) div 1);
+        CheckFactorMultiply := CheckFactorDivisionInt * 11;
+        SecondCheckNumber := SecondWeightSum - CheckFactorMultiply;
+        exit(SecondCheckNumber);
+    end;
 
     local procedure GenderFromPersonalId(Gender: Text; var GenderInt: Integer)
     var
@@ -124,82 +251,75 @@ pageextension 50130 "TK Employee Card" extends "Employee Card"
 
     local procedure EmployeeAge("Birth Date": Date)
     var
-        AgeInDays, AgeDaysCountdown, CurrentYear, CurrentMonth, CurrentDay, BirthYear, BirthMonth, BirthDay, AgeDay, AgeMonth, AgeYear, LeapYears, LastYearNumber : Integer;
-        AgeInTextDay, AgeInTextMonth, AgeInTextYear, AgeText : Text;
-        TestDate, LeapDay, BirthdayCurrentYear, BirthdayLastYear : Date;
-
+        AgeDay, AgeMonth, AgeYear : Integer;
+        BirthdayCurrentYear, BirthdayLastYear : Date;
     begin
+        BirthdayCurrentYear := DMY2Date(Date2DMY("Birth Date", 1), Date2DMY("Birth Date", 2), Date2DMY(Today, 3));
 
-        AgeDaysCountdown := Today - "Birth Date";
+        if BirthdayCurrentYear < Today then begin
+            if Date2DMY("Birth Date", 1) < Date2DMY(Today, 1) then begin
+                AgeDay := Date2DMY(Today, 1) - Date2DMY("Birth Date", 1);
+                AgeMonth := Date2DMY(Today, 2) - Date2DMY("Birth Date", 2);
+                AgeYear := Date2DMY(Today, 3) - Date2DMY("Birth Date", 3);
+            end;
+            if Date2DMY("Birth Date", 1) = Date2DMY(Today, 1) then begin
+                AgeDay := 0;
+                AgeMonth := Date2DMY(Today, 2) - Date2DMY("Birth Date", 2);
+                AgeYear := Date2DMY(Today, 3) - Date2DMY("Birth Date", 3);
+            end;
+            if Date2DMY("Birth Date", 1) > Date2DMY(Today, 1) then begin
+                if Date2DMY("Birth Date", 2) = 2 then begin
+                    AgeDay := DaysInMonth(Date2DMY("Birth Date", 2), Date2DMY("Birth Date", 3)) + ((Date2DMY(Today, 1) - Date2DMY("Birth Date", 1) + 1));
+                    AgeMonth := Date2DMY(Today, 2) - Date2DMY("Birth Date", 2) - 1;
+                    AgeYear := Date2DMY(Today, 3) - Date2DMY("Birth Date", 3);
+                end else begin
+                    AgeDay := DaysInMonth(Date2DMY("Birth Date", 2), Date2DMY("Birth Date", 3)) + ((Date2DMY(Today, 1) - Date2DMY("Birth Date", 1)));
+                    AgeMonth := Date2DMY(Today, 2) - Date2DMY("Birth Date", 2) - 1;
+                    AgeYear := Date2DMY(Today, 3) - Date2DMY("Birth Date", 3);
+                end;
+            end;
+        end;
 
-
-        BirthDay := Date2DMY("Birth Date", 1);
-        BirthMonth := Date2DMY("Birth Date", 2);
-        BirthYear := Date2DMY("Birth Date", 3);
-
-        CurrentDay := Date2DMY(Today, 1);
-        CurrentMonth := Date2DMY(Today, 2);
-        CurrentYear := Date2DMY(Today, 3);
-
-        BirthdayCurrentYear := DMY2Date(BirthDay, BirthMonth, CurrentYear);
-        BirthdayLastYear := DMY2Date(BirthDay, BirthMonth, (CurrentYear - 1));
-
-        // Aasta
-        If BirthdayCurrentYear < Today then begin
+        if BirthdayCurrentYear = Today then begin
             AgeYear := Date2DMY(Today, 3) - Date2DMY("Birth Date", 3);
-            AgeMonth := (DATE2DMY(Today, 2) - DATE2DMY("Birth Date", 2) + 12 * (DATE2DMY(Today, 3) - DATE2DMY("Birth Date", 3))) MOD (AgeYear * 12);
-            AgeDay := Date2DMY(Today, 1) - DATE2DMY("Birth Date", 1);
-            if AgeDay < 0 then begin
-                rec."TK Age" := Format(AgeYear) + ' years ' + Format(AgeMonth) + 'months ' + Format(AgeDay) + ' days';
-            end
+            AgeMonth := Date2DMY(Today, 2) - Date2DMY("Birth Date", 2);
+            AgeDay := Date2DMY(Today, 1) - Date2DMY("Birth Date", 1);
+            Message('Happy Birthday!');
+        end;
 
-            else
-                rec."TK Age" := Format(AgeYear) + ' years ' + Format(AgeMonth) + ' months ' + Format(AgeDay) + ' days';
-
-        end else begin
-
-            AgeYear := Date2DMY(Today, 3) - Date2DMY("Birth Date", 3) - 1;
-            AgeMonth := (DATE2DMY(Today, 2) - DATE2DMY("Birth Date", 2) + 12 * (DATE2DMY(Today, 3) - DATE2DMY("Birth Date", 3))) MOD (AgeYear * 12) - 1;
-            AgeDay := Date2DMY(Today, 1) - DATE2DMY("Birth Date", 1);
-            if AgeDay < 0 then begin
-                rec."TK Age" := Format(AgeYear) + ' years ' + Format(AgeMonth) + ' months ' + Format(AgeDay) + ' days';
-            end
-
-            else begin
-                rec."TK Age" := Format(AgeYear) + ' years ' + Format(AgeMonth) + ' months ' + Format(AgeDay) + ' days';
-
+        if BirthdayCurrentYear > Today then begin
+            if Date2DMY("Birth Date", 1) < Date2DMY(Today, 1) then begin
+                AgeDay := Date2DMY(Today, 1) - Date2DMY("Birth Date", 1);
+                AgeMonth := (12 - Date2DMY("Birth Date", 2)) + Date2DMY(Today, 2);
+                AgeYear := Date2DMY(Today, 3) - Date2DMY("Birth Date", 3) - 1;
+            end;
+            if Date2DMY("Birth Date", 1) = Date2DMY(Today, 1) then begin
+                AgeDay := 0;
+                AgeMonth := (12 - Date2DMY("Birth Date", 2)) + Date2DMY(Today, 2);
+                AgeYear := Date2DMY(Today, 3) - Date2DMY("Birth Date", 3) - 1;
+            end;
+            if Date2DMY("Birth Date", 1) > Date2DMY(Today, 1) then begin
+                AgeDay := DaysInMonth(Date2DMY("Birth Date", 2), Date2DMY("Birth Date", 3)) + ((Date2DMY(Today, 1) - Date2DMY("Birth Date", 1)));
+                AgeMonth := (11 - Date2DMY("Birth Date", 2)) + Date2DMY(Today, 2);
+                AgeYear := Date2DMY(Today, 3) - Date2DMY("Birth Date", 3) - 1;
             end;
         end;
+
+        Rec."TK Age" := Format(AgeYear) + ' years ' + Format(AgeMonth) + ' months ' + Format(AgeDay) + ' days.';
     end;
 
-
-    local procedure IsLeapYear(Year: Integer) IsLeapYear: Boolean
-    begin
-        if (((Year MOD 4 = 0) and (Year MOD 100 <> 0)) or (Year MOD 400 = 0)) then IsLeapYear := true
-    end;
-
-    local procedure LeapYearCount(BirthYear: Integer; DueYear: Integer) DaysInTotalYears: Integer
-    var
-        Year, LeapYearsCounter : Integer;
-    begin
-        Year := BirthYear;
-        LeapYearsCounter := 0;
-        while Year < DueYear do begin
-            if IsLeapYear(Year) then begin
-                LeapYearsCounter := LeapYearsCounter + 1;
-            end;
-            Year := Year + 1;
-        end;
-        DaysInTotalYears := (DueYear - BirthYear) * 365 + LeapYearsCounter;
-    end;
-
-    local procedure CountDaysInMonth(Month: Integer) DaysInMonth: Integer
+    local procedure DaysInMonth(Month: Integer; Year: Integer) DaysInMonth: Integer
     begin
         case Month of
             1:
                 DaysInMonth := 31;
             2:
-                DaysInMonth := 28;
+                if IsLeapYear(Year) then begin
+                    DaysInMonth := 28;
+                end
+                else begin
+                    DaysInMonth := 29;
+                end;
             3:
                 DaysInMonth := 31;
             4:
@@ -221,6 +341,26 @@ pageextension 50130 "TK Employee Card" extends "Employee Card"
             12:
                 DaysInMonth := 31;
         end;
+    end;
+
+    local procedure IsLeapYear(Year: Integer) IsLeapYear: Boolean
+    begin
+        if (((Year MOD 4 = 0) and (Year MOD 100 <> 0)) or (Year MOD 400 = 0)) then IsLeapYear := true
+    end;
+
+    local procedure LeapYearCount(BirthYear: Integer; DueYear: Integer) DaysInTotalYears: Integer
+    var
+        Year, LeapYearsCounter : Integer;
+    begin
+        Year := BirthYear;
+        LeapYearsCounter := 0;
+        while Year < DueYear do begin
+            if IsLeapYear(Year) then begin
+                LeapYearsCounter := LeapYearsCounter + 1;
+            end;
+            Year := Year + 1;
+        end;
+        DaysInTotalYears := (DueYear - BirthYear) * 365 + LeapYearsCounter;
     end;
 
 }

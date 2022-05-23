@@ -63,8 +63,6 @@ table 50132 "TK Course"
         {
             Caption = 'Available Slots';
             DataClassification = CustomerContent;
-
-
         }
         field(110; Details; Blob)
         {

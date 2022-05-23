@@ -21,7 +21,6 @@ page 50137 "TK Participants Course List"
                 field("Course Code"; Rec."Course Code")
                 {
                     ApplicationArea = All;
-
                 }
                 field("Course Name"; Rec."Course Name")
                 {

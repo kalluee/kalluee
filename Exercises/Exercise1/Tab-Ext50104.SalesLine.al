@@ -2,7 +2,6 @@ tableextension 50104 "TK Sales Line" extends "Sales Line"
 {
     fields
     {
-
         modify(Quantity)
         {
             trigger OnAfterValidate()
@@ -11,7 +10,6 @@ tableextension 50104 "TK Sales Line" extends "Sales Line"
                 AddDiscountToSalesLine();
             end;
         }
-
     }
 
     procedure AddDiscountToSalesLine()

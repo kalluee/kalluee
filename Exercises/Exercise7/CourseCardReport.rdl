@@ -19,16 +19,16 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>10.86864cm</Width>
+                  <Width>11.13322cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.07938cm</Height>
+                  <Height>0.39688cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="HeaderDataBox">
+                        <Textbox Name="Textbox2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -42,6 +42,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
                           <Visibility>
                             <Hidden>=Code.SetData(Cstr(Fields!CourseCode_Course.Value) + Chr(177) + Cstr(Fields!Name_Course.Value) + Chr(177) + Cstr(Fields!Description_Course.Value) +Chr(177) + 
 Cstr(Fields!Location_Course.Value) + Chr(177) + Cstr(Fields!Locationdetails_Course.Value) + Chr(177) + Cstr(Fields!Startingdate_Course.Value) +Chr(177) + 
@@ -51,18 +52,8 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                           </Visibility>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
+                              <Style>None</Style>
                             </Border>
-                            <TopBorder>
-                              <Style>None</Style>
-                            </TopBorder>
-                            <LeftBorder>
-                              <Style>None</Style>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Style>None</Style>
-                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -82,18 +73,18 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                           <TablixBody>
                             <TablixColumns>
                               <TablixColumn>
-                                <Width>1.99732cm</Width>
+                                <Width>2.08551cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>4.04372cm</Width>
+                                <Width>4.13191cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>4.8276cm</Width>
+                                <Width>4.91579cm</Width>
                               </TablixColumn>
                             </TablixColumns>
                             <TablixRows>
                               <TablixRow>
-                                <Height>0.68303cm</Height>
+                                <Height>0.72141cm</Height>
                                 <TablixCells>
                                   <TablixCell>
                                     <CellContents>
@@ -251,7 +242,7 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                                 </TablixCells>
                               </TablixRow>
                               <TablixRow>
-                                <Height>0.67235cm</Height>
+                                <Height>0.63397cm</Height>
                                 <TablixCells>
                                   <TablixCell>
                                     <CellContents>
@@ -446,9 +437,6 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
             <TablixRowHierarchy>
               <TablixMembers>
                 <TablixMember>
-                  <KeepWithGroup>After</KeepWithGroup>
-                </TablixMember>
-                <TablixMember>
                   <Group Name="Details">
                     <GroupExpressions>
                       <GroupExpression>=Fields!CourseCode_Course.Value</GroupExpression>
@@ -457,6 +445,10 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                       <BreakLocation>Between</BreakLocation>
                     </PageBreak>
                   </Group>
+                  <TablixMembers>
+                    <TablixMember />
+                    <TablixMember />
+                  </TablixMembers>
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
@@ -464,10 +456,10 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
             <RepeatRowHeaders>true</RepeatRowHeaders>
             <KeepTogether>true</KeepTogether>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0.64739cm</Top>
+            <Top>1.03161cm</Top>
             <Left>2.44157cm</Left>
-            <Height>1.43476cm</Height>
-            <Width>10.86864cm</Width>
+            <Height>1.75226cm</Height>
+            <Width>11.13322cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -475,17 +467,17 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2.54842cm</Height>
+        <Height>3.75502cm</Height>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Body>
-      <Width>17.15739cm</Width>
+      <Width>17.616cm</Width>
       <Page>
         <PageHeader>
-          <Height>10cm</Height>
+          <Height>9.40028cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -566,36 +558,16 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>1.95743cm</Top>
-              <Left>6.40263cm</Left>
+              <Top>1.97507cm</Top>
+              <Left>6.66722cm</Left>
               <Height>0.6cm</Height>
-              <Width>8.11582cm</Width>
+              <Width>6.90758cm</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
                   <Color>LightGrey</Color>
                   <Style>Solid</Style>
                 </Border>
-                <TopBorder>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </TopBorder>
-                <BottomBorder>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </BottomBorder>
-                <LeftBorder>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </LeftBorder>
-                <RightBorder>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                  <Width>1pt</Width>
-                </RightBorder>
                 <BackgroundColor>Khaki</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
@@ -617,10 +589,10 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>3.75743cm</Top>
-              <Left>6.40263cm</Left>
+              <Top>3.77507cm</Top>
+              <Left>6.66722cm</Left>
               <Height>0.6cm</Height>
-              <Width>8.11582cm</Width>
+              <Width>6.90758cm</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -668,10 +640,10 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>3.15743cm</Top>
-              <Left>6.40263cm</Left>
+              <Top>3.17507cm</Top>
+              <Left>6.66722cm</Left>
               <Height>0.6cm</Height>
-              <Width>8.11582cm</Width>
+              <Width>6.90758cm</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -719,10 +691,10 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>2.55743cm</Top>
-              <Left>6.40263cm</Left>
+              <Top>2.57507cm</Top>
+              <Left>6.66722cm</Left>
               <Height>0.6cm</Height>
-              <Width>8.11582cm</Width>
+              <Width>6.90758cm</Width>
               <ZIndex>5</ZIndex>
               <Style>
                 <Border>
@@ -771,9 +743,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>1.95743cm</Top>
-              <Left>0.96831cm</Left>
+              <Left>2.44157cm</Left>
               <Height>0.6cm</Height>
-              <Width>5.43432cm</Width>
+              <Width>4.22564cm</Width>
               <ZIndex>6</ZIndex>
               <Style>
                 <Border>
@@ -822,9 +794,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>3.75743cm</Top>
-              <Left>0.96831cm</Left>
+              <Left>2.44157cm</Left>
               <Height>0.6cm</Height>
-              <Width>5.43432cm</Width>
+              <Width>4.22564cm</Width>
               <ZIndex>7</ZIndex>
               <Style>
                 <Border>
@@ -873,9 +845,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>3.15743cm</Top>
-              <Left>0.96831cm</Left>
+              <Left>2.44157cm</Left>
               <Height>0.6cm</Height>
-              <Width>5.43432cm</Width>
+              <Width>4.22564cm</Width>
               <ZIndex>8</ZIndex>
               <Style>
                 <Border>
@@ -924,9 +896,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>2.55743cm</Top>
-              <Left>0.96831cm</Left>
+              <Left>2.44157cm</Left>
               <Height>0.6cm</Height>
-              <Width>5.43432cm</Width>
+              <Width>4.22564cm</Width>
               <ZIndex>9</ZIndex>
               <Style>
                 <Border>
@@ -975,9 +947,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>4.35743cm</Top>
-              <Left>6.40263cm</Left>
+              <Left>6.66722cm</Left>
               <Height>0.63951cm</Height>
-              <Width>8.11582cm</Width>
+              <Width>6.90758cm</Width>
               <ZIndex>10</ZIndex>
               <Style>
                 <Border>
@@ -1026,9 +998,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>6.15743cm</Top>
-              <Left>6.40263cm</Left>
+              <Left>6.66722cm</Left>
               <Height>0.6cm</Height>
-              <Width>8.11582cm</Width>
+              <Width>6.90758cm</Width>
               <ZIndex>11</ZIndex>
               <Style>
                 <Border>
@@ -1077,9 +1049,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>5.55743cm</Top>
-              <Left>6.40263cm</Left>
+              <Left>6.66722cm</Left>
               <Height>0.6cm</Height>
-              <Width>8.11582cm</Width>
+              <Width>6.90758cm</Width>
               <ZIndex>12</ZIndex>
               <Style>
                 <Border>
@@ -1128,9 +1100,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>4.95743cm</Top>
-              <Left>6.40263cm</Left>
+              <Left>6.66722cm</Left>
               <Height>0.6cm</Height>
-              <Width>8.11582cm</Width>
+              <Width>6.90758cm</Width>
               <ZIndex>13</ZIndex>
               <Style>
                 <Border>
@@ -1179,9 +1151,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>4.35743cm</Top>
-              <Left>0.96831cm</Left>
+              <Left>2.44157cm</Left>
               <Height>0.63951cm</Height>
-              <Width>5.43432cm</Width>
+              <Width>4.22564cm</Width>
               <ZIndex>14</ZIndex>
               <Style>
                 <Border>
@@ -1230,9 +1202,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>6.15743cm</Top>
-              <Left>0.96831cm</Left>
+              <Left>2.44157cm</Left>
               <Height>0.6cm</Height>
-              <Width>5.43432cm</Width>
+              <Width>4.22564cm</Width>
               <ZIndex>15</ZIndex>
               <Style>
                 <Border>
@@ -1281,9 +1253,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>5.55743cm</Top>
-              <Left>0.96831cm</Left>
+              <Left>2.44157cm</Left>
               <Height>0.6cm</Height>
-              <Width>5.43432cm</Width>
+              <Width>4.22564cm</Width>
               <ZIndex>16</ZIndex>
               <Style>
                 <Border>
@@ -1332,9 +1304,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>4.95743cm</Top>
-              <Left>0.96831cm</Left>
+              <Left>2.44157cm</Left>
               <Height>0.6cm</Height>
-              <Width>5.43432cm</Width>
+              <Width>4.22564cm</Width>
               <ZIndex>17</ZIndex>
               <Style>
                 <Border>
@@ -1383,9 +1355,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>7.95743cm</Top>
-              <Left>6.40263cm</Left>
+              <Left>6.66722cm</Left>
               <Height>0.6cm</Height>
-              <Width>8.11582cm</Width>
+              <Width>6.90758cm</Width>
               <ZIndex>18</ZIndex>
               <Style>
                 <Border>
@@ -1434,9 +1406,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>7.35743cm</Top>
-              <Left>6.40263cm</Left>
+              <Left>6.66722cm</Left>
               <Height>0.6cm</Height>
-              <Width>8.11582cm</Width>
+              <Width>6.90758cm</Width>
               <ZIndex>19</ZIndex>
               <Style>
                 <Border>
@@ -1485,9 +1457,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>6.75743cm</Top>
-              <Left>6.40263cm</Left>
+              <Left>6.66722cm</Left>
               <Height>0.6cm</Height>
-              <Width>8.11582cm</Width>
+              <Width>6.90758cm</Width>
               <ZIndex>20</ZIndex>
               <Style>
                 <Border>
@@ -1536,9 +1508,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>7.95743cm</Top>
-              <Left>0.96831cm</Left>
+              <Left>2.44157cm</Left>
               <Height>0.6cm</Height>
-              <Width>5.43432cm</Width>
+              <Width>4.22564cm</Width>
               <ZIndex>21</ZIndex>
               <Style>
                 <Border>
@@ -1587,9 +1559,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>7.35743cm</Top>
-              <Left>0.96831cm</Left>
+              <Left>2.44157cm</Left>
               <Height>0.6cm</Height>
-              <Width>5.43432cm</Width>
+              <Width>4.22564cm</Width>
               <ZIndex>22</ZIndex>
               <Style>
                 <Border>
@@ -1638,9 +1610,9 @@ Cstr(Fields!AvailableSlots_Course.Value), 1)</Hidden>
                 </Paragraph>
               </Paragraphs>
               <Top>6.75743cm</Top>
-              <Left>0.96831cm</Left>
+              <Left>2.44157cm</Left>
               <Height>0.6cm</Height>
-              <Width>5.43432cm</Width>
+              <Width>4.22564cm</Width>
               <ZIndex>23</ZIndex>
               <Style>
                 <Border>
@@ -1961,6 +1933,7 @@ End Function
 
 Shared Data1 as Object
 
+
 Public Function GetData(Num as Integer, Group as integer) as Object
 if Group = 1 then
    Return Cstr(Choose(Num, Split(Cstr(Data1),Chr(177))))
@@ -1971,7 +1944,9 @@ Public Function SetData(NewData as Object,Group as integer)
   If Group = 1 and NewData &lt;&gt; "" Then
       Data1 = NewData
   End If
-End Function</Code>
+  Return True
+End Function
+</Code>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>

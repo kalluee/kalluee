@@ -12,8 +12,8 @@ pageextension 50100 "TK Customer Card" extends "Customer Card"
                 ApplicationArea = All;
                 StyleExpr = RowsStyle;
                 Editable = false;
-
             }
+
             field("TK Sales Amount"; Rec."TK Sales Amount")
             {
                 ToolTip = 'Specifies the value of the Sales Amount field.',
@@ -23,9 +23,6 @@ pageextension 50100 "TK Customer Card" extends "Customer Card"
                 Editable = false;
             }
         }
-
-        moveafter(AdjCustProfit; "Balance Due (LCY)")
-        // Add changes to page layout here
     }
 
 
