@@ -1,10 +1,5 @@
 pageextension 50139 "TK Empoyee List" extends "Employee List"
 {
-    layout
-    {
-        // Add changes to page layout here
-    }
-
     actions
     {
         addbefore("Absence Registration")
@@ -24,8 +19,4 @@ pageextension 50139 "TK Empoyee List" extends "Employee List"
             }
         }
     }
-    // Add changes to page actions here
-
-    var
-        myInt: Integer;
 }

@@ -60,9 +60,11 @@ page 50142 "TK Course Card Table"
                 {
                     ApplicationArea = All;
                 }
-                field("Available Slots"; Rec."Available Slots")
+                field("Available Slots"; AvailableSpots())
                 {
                     ApplicationArea = All;
+                    Enabled = false;
+                    Editable = true;
                 }
             }
             part(Participants; "TK Course Participants List")
@@ -110,12 +112,15 @@ page 50142 "TK Course Card Table"
         }
     }
 
+    trigger OnAfterGetRecord()
+    begin
+        AvailableSpots()
+    end;
+
     var
         FileName: Text[100];
         NewSheetName: Text[100];
         MainSheetName: Text[100];
-
-
         TempExcelBuffer: Record "Excel Buffer" temporary;
         CourseBuffer: Record "TK Course";
         ParticipantsBuffer: Record "TK Course Participants";
@@ -124,8 +129,9 @@ page 50142 "TK Course Card Table"
         CourseCodeISBlankMsg: Label 'Course Code field is blank';
         ExcelImportSuccess: Label 'Excel is successfully imported.';
         BookNameTxt: Label 'Export Courses';
-        MainSheetTxt: Label 'Courses';
         HeaderTxt: Label 'Export Courses';
+        CurrentRow: Integer;
+        CurrentCol: Integer;
 
 
     local procedure GetValueAtCell(Row: Integer; Col: Integer): Text
@@ -205,86 +211,114 @@ page 50142 "TK Course Card Table"
         Message(ExcelImportSuccess);
     end;
 
-
     local procedure ExportToExcel()
     begin
         MainSheetName := 'Courses';
         TempExcelBuffer.CreateNewBook(MainSheetName);
         TempExcelBuffer.WriteSheet(HeaderTxt, CompanyName(), UserId());
+
         ExportCourseTable();
+
         TempExcelBuffer.CloseBook();
         DownloadAndOpenExcel();
     end;
 
-
     local procedure ExportCourseTable()
     begin
-        MainSheetName := 'Courses';
-        // ExportCourseHeader();
+        CourseBuffer.Reset();
         if CourseBuffer.FindSet() then
+            ExportCourseHeader();
+        repeat
+            TempExcelBuffer.SelectOrAddSheet(MainSheetName);
+            CourseBuffer.CalcFields("Registered Participants");
+            TempExcelBuffer.NewRow();
+            TempExcelBuffer.AddColumn(CourseBuffer."Course Code", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+            TempExcelBuffer.AddColumn(CourseBuffer.Name, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+            TempExcelBuffer.AddColumn(CourseBuffer.Description, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+            TempExcelBuffer.AddColumn(CourseBuffer.Location, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+            TempExcelBuffer.AddColumn(CourseBuffer."Location details", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+            TempExcelBuffer.AddColumn(CourseBuffer."Starting date", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Date);
+            TempExcelBuffer.AddColumn(CourseBuffer."End date", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Date);
+            TempExcelBuffer.AddColumn(CourseBuffer.Price, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
+            TempExcelBuffer.AddColumn(CourseBuffer."Max No. of Participants", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
+            TempExcelBuffer.AddColumn(CourseBuffer."Registered Participants", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
+            TempExcelBuffer.AddColumn(CourseBuffer."Available Slots", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
+
+            ExportCourseParticipantTable();
+
+        until CourseBuffer.Next() = 0;
+    end;
+
+    local procedure ExportCourseParticipantTable()
+    begin
+        CourseBuffer.Reset();
+        ParticipantsBuffer.Reset();
+        ParticipantsBuffer.SetRange("Course Code", CourseBuffer."Course Code");
+        if ParticipantsBuffer.FindSet() then begin
+            NewSheetName := Format(CourseBuffer."Course Code");
+            TempExcelBuffer.WriteSheet(NewSheetName, CompanyName(), UserId());
+            TempExcelBuffer.SelectOrAddSheet(NewSheetName);
+            ExportParticipantsListHeader();
             repeat
-
+                ParticipantsBuffer.CalcFields("First Name", "Last Name");
                 TempExcelBuffer.NewRow();
-                TempExcelBuffer.AddColumn(CourseBuffer."Course Code", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-                TempExcelBuffer.AddColumn(CourseBuffer.Name, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-                TempExcelBuffer.AddColumn(CourseBuffer.Description, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-                TempExcelBuffer.AddColumn(CourseBuffer.Location, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-                TempExcelBuffer.AddColumn(CourseBuffer."Location details", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-                TempExcelBuffer.AddColumn(CourseBuffer."Starting date", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Date);
-                TempExcelBuffer.AddColumn(CourseBuffer."End date", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Date);
-                TempExcelBuffer.AddColumn(CourseBuffer.Price, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
-                TempExcelBuffer.AddColumn(CourseBuffer."Max No. of Participants", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
-                TempExcelBuffer.AddColumn(CourseBuffer."Registered Participants", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
-                TempExcelBuffer.AddColumn(CourseBuffer."Available Slots", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
-
-                ParticipantsBuffer.Reset();
-                ParticipantsBuffer.SetRange("Course Code", CourseBuffer."Course Code");
-
-
-                NewSheetName := Format(CourseBuffer."Course Code");
-                TempExcelBuffer.SelectOrAddSheet(NewSheetName);
-
-                if ParticipantsBuffer.FindSet() then begin
-
-
-                    repeat
-                        TempExcelBuffer.WriteSheet(NewSheetName, CompanyName(), UserId());
-                        ParticipantsBuffer.CalcFields("First Name", "Last Name");
-                        TempExcelBuffer.NewRow();
-                        TempExcelBuffer.AddColumn(ParticipantsBuffer."Participant Code", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-                        TempExcelBuffer.AddColumn(ParticipantsBuffer."First Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-                        TempExcelBuffer.AddColumn(ParticipantsBuffer."Last Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-                    until ParticipantsBuffer.Next() = 0;
-                end;
-
-                TempExcelBuffer.SelectOrAddSheet(MainSheetName);
-
-            until CourseBuffer.Next() = 0;
+                TempExcelBuffer.AddColumn(ParticipantsBuffer."Participant Code", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                TempExcelBuffer.AddColumn(ParticipantsBuffer."First Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                TempExcelBuffer.AddColumn(ParticipantsBuffer."Last Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+            until ParticipantsBuffer.Next() = 0;
+        end;
 
     end;
 
     local procedure ExportCourseHeader()
     begin
-        // TempExcelBuffer.Reset();
         TempExcelBuffer.DeleteAll();
         TempExcelBuffer.Init();
         TempExcelBuffer.NewRow();
-        TempExcelBuffer.AddColumn('Course Code', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn('Name', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn('Description', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn('Location', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn('Location details', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn('Starting date', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn('End date', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn('Price', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn('Max No. of Participants', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn('Registered Participants', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-        TempExcelBuffer.AddColumn('Available Slots', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Course Code', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Name', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Description', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Location', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Location details', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Starting date', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('End date', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Price', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Max No. of Participants', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Registered Participants', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Available Slots', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+    end;
+
+    local procedure ExportParticipantsListHeader()
+    begin
+        TempExcelBuffer.DeleteAll();
+        TempExcelBuffer.Init();
+        TempExcelBuffer.NewRow();
+        TempExcelBuffer.AddColumn('Participant Code', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('First Name', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Last Name', false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
     end;
 
     local procedure DownloadAndOpenExcel()
     begin
         TempExcelBuffer.SetFriendlyFilename(BookNameTxt);
         TempExcelBuffer.OpenExcel();
+    end;
+
+    local procedure AvailableSpots(): Integer
+    begin
+        if (rec."Max No. of Participants" - rec."Registered Participants") < 0 then
+            Error('Too many participants already registered!');
+        exit(rec."Max No. of Participants" - rec."Registered Participants");
+    end;
+
+    procedure SetCurrent(NewCurrentRow: Integer; NewCurrentCol: Integer)
+    begin
+        CurrentRow := NewCurrentRow;
+        CurrentCol := NewCurrentCol;
+    end;
+
+    procedure NewRow()
+    begin
+        SetCurrent(CurrentRow + 1, 0);
     end;
 }

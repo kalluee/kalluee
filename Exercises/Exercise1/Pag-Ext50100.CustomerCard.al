@@ -4,7 +4,6 @@ pageextension 50100 "TK Customer Card" extends "Customer Card"
     {
         addafter("Balance (LCY)")
         {
-
             field("TK Bonus Level"; Rec."TK Bonus Level")
             {
                 ToolTip = 'Specifies the value of the Bonus level field.',
@@ -13,7 +12,6 @@ pageextension 50100 "TK Customer Card" extends "Customer Card"
                 StyleExpr = RowsStyle;
                 Editable = false;
             }
-
             field("TK Sales Amount"; Rec."TK Sales Amount")
             {
                 ToolTip = 'Specifies the value of the Sales Amount field.',
@@ -24,7 +22,6 @@ pageextension 50100 "TK Customer Card" extends "Customer Card"
             }
         }
     }
-
 
     procedure RewardLevel()
     begin

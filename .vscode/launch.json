@@ -9,7 +9,7 @@
             "server": "http://bc19",
             "serverInstance": "BC",
             "authentication": "Windows",
-            "startupObjectId": 5200,
+            "startupObjectId": 50105,
             "startupObjectType": "Page",
             "breakOnError": true,
             "breakOnRecordWrite": false,
@@ -17,8 +17,27 @@
             "enableLongRunningSqlStatements": true,
             "longRunningSqlStatementsThreshold": 500,
             "numberOfSqlStatements": 10,
-            "tenant": "default",           
+            "tenant": "default",          
             
         }
+        // ,
+        // {           
+        //     "type": "al",
+        //     "request": "launch",
+        //     "name": "Timo bc200",
+        //     "server": "http://localhost",
+        //     "serverInstance": "BC200",
+        //     "authentication": "Windows",
+        //     "port": 7049,
+        //     "startupObjectId": 50135,
+        //     "startupObjectType": "Page",
+        //     "breakOnError": true,
+        //     "breakOnRecordWrite": false,
+        //     "enableSqlInformationDebugger": true,
+        //     "enableLongRunningSqlStatements": true,
+        //     "longRunningSqlStatementsThreshold": 500,
+        //     "numberOfSqlStatements": 10,
+        //     "tenant": "default",       
+        // }
     ]
 }

@@ -24,7 +24,6 @@ pageextension 50130 "TK Employee Card" extends "Employee Card"
                 Editable = false;
             }
         }
-
         addafter(Personal)
         {
             group("TK Courses")
@@ -59,7 +58,6 @@ pageextension 50130 "TK Employee Card" extends "Employee Card"
     local procedure DecodePersonalId()
     var
         Employee: Record Employee;
-
         PersonalIdCode: BigInteger;
         DOB: Date;
         GenderInt: Integer;
@@ -67,6 +65,7 @@ pageextension 50130 "TK Employee Card" extends "Employee Card"
     begin
         Employee := Rec;
         PersonalId := Rec."TK Personal ID";
+
         if StrLen(PersonalId) <> 11 then
             Error('Valesti sisestatud isikukood (liiga lühike)!');
 
@@ -74,7 +73,7 @@ pageextension 50130 "TK Employee Card" extends "Employee Card"
             Error('Valesti sisestatud isikukood! Sisesta ainult numbrid!');
 
         if not IsValidIdCode(PersonalId) then
-            Error('Valesti sisestatud isikukood! Kontrolli viimast numbrit!');
+            Error('Sisestatud isikukood ei vasta standardile!');
 
         GenderFromPersonalId(CopyStr(Rec."TK Personal ID", 1, 1), GenderInt);
         DateOfBirthFromPersonalId(CopyStr(Rec."TK Personal ID", 2, 6), GenderInt);
@@ -96,7 +95,6 @@ pageextension 50130 "TK Employee Card" extends "Employee Card"
                     IsValidIdCode := false;
         end;
     end;
-
 
     local procedure GetFirstCheckNumber(PersonalId: Text): Integer
     var

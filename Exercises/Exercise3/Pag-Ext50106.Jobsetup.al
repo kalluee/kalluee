@@ -6,7 +6,6 @@ pageextension 50106 "TK Job setup" extends "Jobs Setup"
         {
             group("New Jobs")
             {
-
                 field("TK Job Def. Dim. Code"; Rec."TK Job Def. Dim. Code")
                 {
                     Caption = 'Default Dimention Code';
@@ -15,12 +14,5 @@ pageextension 50106 "TK Job setup" extends "Jobs Setup"
                 }
             }
         }
-        // Add changes to page layout here
     }
-
-    actions
-    {
-        // Add changes to page actions here
-    }
-
 }

@@ -38,16 +38,17 @@ page 50135 "TK Course List"
                     Editable = false;
                 }
             }
-
         }
-
     }
-
+    trigger OnAfterGetRecord()
+    begin
+        AvailableSpots()
+    end;
 
     local procedure AvailableSpots(): Integer
     begin
+        if (rec."Max No. of Participants" - rec."Registered Participants") < 0 then
+            Error('Too many participants already registered');
         exit(rec."Max No. of Participants" - rec."Registered Participants");
     end;
-
-
 }

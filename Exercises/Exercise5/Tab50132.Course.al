@@ -79,7 +79,6 @@ table 50132 "TK Course"
         }
         key(MyKey; "Starting date")
         {
-
         }
     }
 
@@ -110,7 +109,6 @@ table 50132 "TK Course"
         TempBlob.FromRecord(Rec, fieldNo("Details"));
         TempBlob.CreateInStream(InS);
         InS.Read(TextToBlob);
-
     end;
 
     procedure FilterByEmployee(Employee: Record Employee; var tempCourse: Record "TK Course" temporary)
@@ -134,7 +132,6 @@ table 50132 "TK Course"
                 end;
             until CourseParticipants.Next() = 0;
     end;
-
 
     trigger OnInsert()
     begin

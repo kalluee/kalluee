@@ -66,7 +66,7 @@ page 50134 "TK Course Card"
                 field("Available Spots"; AvailableSpots())
                 {
                     ApplicationArea = All;
-                    Editable = false;
+                    Enabled = false;
                 }
                 field(Details; TextToBlob)
                 {
@@ -110,16 +110,12 @@ page 50134 "TK Course Card"
         TextToBlob: Text;
 
 
-
     trigger OnAfterGetRecord()
     begin
         Rec.GetCourseInformationFromField(TextToBlob);
     end;
 
-
     trigger OnAfterGetCurrRecord()
-    var
-        myInt: Integer;
     begin
         if true then;
     end;
@@ -139,7 +135,6 @@ page 50134 "TK Course Card"
                 end;
         end;
     end;
-
 
     procedure AvailableSpots(): Integer
     begin

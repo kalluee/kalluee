@@ -65,7 +65,6 @@ table 50133 "TK Course Participants"
         }
     }
 
-
     trigger OnInsert()
     begin
         AvailableSpots(false);
@@ -73,7 +72,7 @@ table 50133 "TK Course Participants"
 
     trigger OnModify()
     begin
-
+        AvailableSpots(false);
     end;
 
     trigger OnDelete()
@@ -88,7 +87,8 @@ table 50133 "TK Course Participants"
 
     local procedure AvailableSpots(IsDeleted: Boolean)
     var
-        RegAtt, MaxAtt : Integer;
+        RegAtt: Integer;
+        MaxAtt: Integer;
         CourseList: Record "TK Course";
     begin
 
@@ -102,9 +102,7 @@ table 50133 "TK Course Participants"
         if not IsDeleted then
             if RegAtt >= MaxAtt then begin
                 Error('');
-
             end;
         CourseList.Modify();
-
     end;
 }

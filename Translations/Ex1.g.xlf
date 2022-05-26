@@ -113,6 +113,46 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table TK Course Participants - Field Starting date - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1554351545 - Field 428305590 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Average Invoice</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK FlowField Test Table - Field Average Invoice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1554351545 - Field 4190130733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK FlowField Test Table - Field Customer No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1554351545 - Field 1230621540 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>HasInvoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK FlowField Test Table - Field HasInvoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1554351545 - Field 1074429222 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice Count</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK FlowField Test Table - Field Invoice Count - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1554351545 - Field 4210742588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoices Total</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK FlowField Test Table - Field Invoices Total - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1554351545 - Field 3555582167 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max Invoice</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK FlowField Test Table - Field Max Invoice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1554351545 - Field 2714729541 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Min Invoice</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK FlowField Test Table - Field Min Invoice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1554351545 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK FlowField Test Table - Field Name - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 4112811162 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Course Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -163,11 +203,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType HeaderTxt</note>
         </trans-unit>
-        <trans-unit id="Page 1174558796 - NamedType 789266984" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Courses</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Card Table - NamedType MainSheetTxt</note>
-        </trans-unit>
         <trans-unit id="Page 1174558796 - NamedType 511806700" size-unit="char" translate="yes" xml:space="preserve">
           <source>No Excel file found!</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -208,6 +243,31 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page TK Course Participants List - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 214220107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer with Pizzazz</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Customer with Pizzazz - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 214220107 - View 3817730059 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blocked Customers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Customer with Pizzazz - View Pizzazz1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 214220107 - View 1435852614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customers with price groups</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Customer with Pizzazz - View Pizzazz2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2051695550 - Control 864109087 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Date Virtual - Control Period Start - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2051695550 - Control 95864743 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Date Virtual - Control Period Type - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1952283510 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Employee Details</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -217,6 +277,11 @@
           <source>Employee Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page TK Employee Details FactBox - Control No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2942909654 - Control 2272340397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This Is Caption</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Integer Page - Control Number - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 435687992 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Participants Course List</source>

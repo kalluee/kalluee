@@ -13,7 +13,7 @@ codeunit 50100 "TK Helper Functions"
 
         // Get.() funktsiooniga saad kätte kogu objekti, antud juhul "Jobs Setup" tabeli väljad
         "Jobs Setup".Get();
-        // Kontrollin, kas Dimensioon on projectile on loodud läbi enda loodud "TK Job Def. Dim. Code" välja
+        // Kontrollin, kas Dimensioon on projektile on loodud läbi enda loodud "TK Job Def. Dim. Code" välja
         if "Jobs Setup"."TK Job Def. Dim. Code" = '' then begin
             Error('Dimensiooni pole loodud');
         end;
