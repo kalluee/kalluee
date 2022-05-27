@@ -87,22 +87,21 @@ table 50133 "TK Course Participants"
 
     local procedure AvailableSpots(IsDeleted: Boolean)
     var
-        RegAtt: Integer;
-        MaxAtt: Integer;
-        CourseList: Record "TK Course";
+        RegisteredParticipant: Integer;
+        MaxParticipants: Integer;
+        Course: Record "TK Course";
     begin
+        Course.Get(Rec."Course Code");
+        Course.CalcFields("Registered Participants");
 
-        CourseList.Get(Rec."Course Code");
-        CourseList.CalcFields("Registered Participants");
-
-        RegAtt := CourseList."Registered Participants";
-        MaxAtt := CourseList."Max No. of Participants";
-        CourseList."Available Slots" := MaxAtt - RegAtt;
+        RegisteredParticipant := Course."Registered Participants";
+        MaxParticipants := Course."Max No. of Participants";
+        Course."Available Slots" := MaxParticipants - RegisteredParticipant;
 
         if not IsDeleted then
-            if RegAtt >= MaxAtt then begin
+            if RegisteredParticipant >= MaxParticipants then begin
                 Error('');
             end;
-        CourseList.Modify();
+        Course.Modify();
     end;
 }

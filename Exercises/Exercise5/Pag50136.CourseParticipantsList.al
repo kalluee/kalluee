@@ -6,7 +6,6 @@ page 50136 "TK Course Participants List"
     UsageCategory = Lists;
     ApplicationArea = All;
 
-
     layout
     {
         area(Content)

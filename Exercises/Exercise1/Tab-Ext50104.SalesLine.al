@@ -10,7 +10,22 @@ tableextension 50104 "TK Sales Line" extends "Sales Line"
                 AddDiscountToSalesLine();
             end;
         }
+        // See ei tööta
+        // modify("No.")
+        // {
+        //     TableRelation = if (Type = const(Job)) Job."No.";
+        //     trigger OnAfterValidate()
+        //     var
+        //         Job: Record Job;
+        //     begin
+        //         if Type = Type::Job then begin
+        //             Job.get("No.");
+        //             Rec.Validate(Description, Job.Description);
+        //         end;
+        //     end;
+        // }
     }
+
 
     procedure AddDiscountToSalesLine()
     var

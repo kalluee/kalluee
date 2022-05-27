@@ -58,10 +58,21 @@ page 50134 "TK Course Card"
                 field("Max No. of Attendees"; Rec."Max No. of Participants")
                 {
                     ApplicationArea = All;
+                    trigger OnValidate()
+                    begin
+                        AvailableSpots();
+                        CurrPage.Update();
+                    end;
                 }
                 field("Registered Attendees"; Rec."Registered Participants")
                 {
                     ApplicationArea = All;
+
+                    trigger OnValidate()
+                    begin
+                        AvailableSpots();
+                        CurrPage.Update();
+                    end;
                 }
                 field("Available Spots"; AvailableSpots())
                 {
@@ -137,7 +148,12 @@ page 50134 "TK Course Card"
     end;
 
     procedure AvailableSpots(): Integer
+    var
+        AvailableSpots: Integer;
     begin
-        exit(rec."Max No. of Participants" - rec."Registered Participants");
+        AvailableSpots := rec."Max No. of Participants" - rec."Registered Participants";
+        Rec.Modify();
+        CurrPage.Update();
+        exit(AvailableSpots);
     end;
 }

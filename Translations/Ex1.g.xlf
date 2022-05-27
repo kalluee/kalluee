@@ -153,6 +153,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table TK FlowField Test Table - Field Name - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3071479777 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Validate Table</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Validate Table - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3071479777 - Field 970416965 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PK</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Validate Table - Field PK - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3071479777 - Field 1096663028 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Validate this</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table TK Validate Table - Field Validate this - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 4112811162 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Course Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -288,6 +303,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page TK Participants Course List - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 767549273 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Validate Test</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Validate Test - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 767549273 - Control 970416965 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the PK field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Validate Test - Control PK - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 767549273 - Control 1096663028 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Validate this field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK Validate Test - Control Validate this - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Report 4279752619 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Course List Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -412,6 +442,11 @@
           <source>Other</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum TK Course Location Enum - EnumValue Other - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1688374021 - EnumValue 2818324089 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 1710557762">
+          <source>Job</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension TK MySales - EnumValue Job - Property Caption</note>
         </trans-unit>
       </group>
     </body>

@@ -133,14 +133,19 @@ table 50132 "TK Course"
             until CourseParticipants.Next() = 0;
     end;
 
+    local procedure AvailableSpots()
+    begin
+        Rec."Available Slots" := rec."Max No. of Participants" - rec."Registered Participants";
+    end;
+
     trigger OnInsert()
     begin
-
+        AvailableSpots();
     end;
 
     trigger OnModify()
     begin
-
+        AvailableSpots();
     end;
 
     trigger OnDelete()

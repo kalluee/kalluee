@@ -65,6 +65,7 @@ page 50142 "TK Course Card Table"
                     ApplicationArea = All;
                     Enabled = false;
                     Editable = true;
+
                 }
             }
             part(Participants; "TK Course Participants List")
@@ -261,6 +262,8 @@ page 50142 "TK Course Card Table"
             ExportParticipantsListHeader();
             repeat
                 ParticipantsBuffer.CalcFields("First Name", "Last Name");
+                TempExcelBuffer.DeleteAll();
+                TempExcelBuffer.Init();
                 TempExcelBuffer.NewRow();
                 TempExcelBuffer.AddColumn(ParticipantsBuffer."Participant Code", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
                 TempExcelBuffer.AddColumn(ParticipantsBuffer."First Name", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
