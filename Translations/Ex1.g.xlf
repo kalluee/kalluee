@@ -318,6 +318,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page TK Validate Test - Control Validate this - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 3064808510 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>What is my IP address</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK What's my IP address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3064808510 - Control 3510957723 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Current IP address of BC Server</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page TK What's my IP address - Control IP - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 4279752619 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Course List Report</source>
           <note from="Developer" annotates="general" priority="2"></note>
